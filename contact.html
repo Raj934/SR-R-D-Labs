@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<!-- Created by CodingLab |www.youtube.com/CodingLabYT-->
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <title> SR R&D Labs </title>
+  <link rel="icon" href="assets/img/logo.png" type="image/x-icon" />
+  <link rel="stylesheet" href="assets/css/style.css">
+ 
+
+  <!-- Boxicons CDN Link -->
+  <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body class="">
+  <div class="sidebar">
+    <div class="logo-details">
+      <!-- <i class='bx bxl-c-plus-plus icon'></i> -->
+      <a href="index.html" class="logo"><img src="assets/img/SR Logo.png" alt="" class='bx bxl-c-plus-plus icon'
+          style="width: 91px;height: 85px;margin-left: -18px;margin-right: 17px;"></a>
+      <div class="logo_name" style="
+        margin-left: 12px;">SR R&D Labs</div>
+      <i class='bx bx-menu' id="btn"></i>
+    </div>
+    <ul class="nav-list">
+      <!-- <li>
+          <i class='bx bx-search' ></i>
+         <input type="text" placeholder="Search...">
+         <span class="tooltip">Search</span>
+      </li> -->
+      <li>
+        <a href="index.html" class="nav-link">
+          <i class='bx bx-home'></i>
+          <span class="links_name">Home</span>
+        </a>
+        <span class="tooltip">Home</span>
+      </li>
+      <li>
+        <a href="project.html" class="nav-link">
+          <i class='bx bxs-folder-open'></i>
+          <span class="links_name">Project</span>
+        </a>
+        <span class="tooltip">Project</span>
+
+      </li>
+      <li>
+        <a href="about.html" class="nav-link">
+          <i class='bx bx-info-circle'></i>
+          <span class="links_name">About</span>
+        </a>
+        <span class="tooltip">About</span>
+      </li>
+      <li class="active">
+        <a href="contact.html" class="nav-link">
+          <i class='bx bxs-contact'></i>
+          <span class="links_name">Contact</span>
+        </a>
+        <span class="tooltip">Contact</span>
+      </li>
+
+    </ul>
+  </div>
+  <section class="home-section">
+    <div class="flex">
+
+      <div style="margin-top: 42px;">
+        <div class="col-md-5 mr-auto fade-in" style="margin-left: 98px;margin-right: 94px;">
+          <h3>Let's work together</h3>
+          <p class="p_c">At S.R. R&D Labs, we're driven by innovation and collaboration. We believe in creating
+            solutions that make a difference and push the boundaries of what's possible. Whether you're a partner,
+            client, or enthusiast, we invite you to join us in shaping the future of technology.</p>
+          
+          <p class="p_c">Ready to embark on a journey of innovation together? Contact us to discuss partnerships, collaborations, or to
+            learn more about our projects and services.</p>
+          <p class="p_c">Join us at S.R. R&D Labs as we continue to innovate, create, and make a positive impact on the
+            world through technology.</p>
+
+        </div>
+        <section id="project">
+          <div class="container_contact  fade-in">
+            <div class="">
+              <!-- Content for About section -->
+
+              <div class="contact-info">
+                <div class="">
+                  <h2 style="color: #003225;">Get in Touch</h2>
+                </div>
+                
+                <p> <i class="bx bxs-map icon"></i><a
+                  href="https://www.linkedin.com/in/syed-rahim-a2b183155" target="_blank">Bangalore, India</a></p>
+
+                
+                <p> <i class="bx bx-envelope icon"></i><a
+                    href="mailto:srrdlabs@gmail.com">srrdlabs@gmail.com  </a></p>
+                <p><i class="bx bxl-linkedin-square icon"></i><a
+                    href="https://www.linkedin.com/in/syed-rahim-a2b183155" target="_blank">Syed Rahim </a></p>
+
+              </div>
+            </div>
+        </section>
+      </div>
+
+      <div style="width: 157%; padding-top: 5px;">       
+        <section id="project" style="padding-top: 30px;">
+          <div class="container_contact  fade-in">
+            <div class=" fade-in">
+              <form id="contactForm">
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" required><br><br>
+
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+
+                <label for="phone">Phone:</label><br>
+                <input type="phone" id="phone" name="phone" required><br><br>
+
+                <label for="comment">Comment:</label><br>
+                <textarea id="comment" name="comment" rows="4" required></textarea><br><br>
+
+                <div class="form-group" style="align-items:center;justify-content: center ;">
+                  <button type="submit">Submit</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </div>
+
+
+  </section>
+  <script>
+    //email
+    document.getElementById('contactForm').addEventListener('submit', function (event) {
+      event.preventDefault(); // Prevent the form from submitting
+
+      // Get form data
+      var formData = new FormData(this);
+
+      // Construct an email message
+      var message = "Name: " + formData.get('name') + "\n";
+      message += "Email: " + formData.get('email') + "\n";
+      message += "Phone: " + formData.get('phone') + "\n";
+      message += "Comment:\n" + formData.get('comment');
+      message +=  "\n";
+      message +=  "\n";
+      message +=  "Best regards,\n";
+      message += "" + formData.get('name').toUpperCase() + "\n";
+
+
+      // Send email using mailto function
+      window.location.href = "mailto:rajkumar93425.rk@gmail.com;srrdlabs@gmail.com" +
+        "?subject=Contact Form Submission" +
+        "&body=" + encodeURIComponent(message);
+    });
+
+    let sidebar = document.querySelector(".sidebar");
+    let closeBtn = document.querySelector("#btn");
+    let searchBtn = document.querySelector(".bx-search");
+
+    closeBtn.addEventListener("click", () => {
+      sidebar.classList.toggle("open");
+      menuBtnChange();//calling the function(optional)
+    });
+
+    // following are the code to change sidebar button(optional)
+    function menuBtnChange() {
+      if (sidebar.classList.contains("open")) {
+        closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");//replacing the iocns class
+      } else {
+        closeBtn.classList.replace("bx-menu-alt-right", "bx-menu");//replacing the iocns class
+      }
+    }
+  </script>
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<!-- Created by CodingLab |www.youtube.com/CodingLabYT-->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title> SR R&D Labs </title>
+    <link rel="icon" href="assets/img/logo.png"
+    type="image/x-icon" />
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body class="">
+  <div class="sidebar">
+    <div class="logo-details">
+      <!-- <i class='bx bxl-c-plus-plus icon'></i> -->
+      <a href="index.html" class="logo"><img src="assets/img/SR Logo.png" alt="" class='bx bxl-c-plus-plus icon' style="width: 91px;height: 85px;margin-left: -18px;margin-right: 17px;"></a>
+        <div class="logo_name" style="
+        margin-left: 12px;">SR R&D Labs</div>
+        <i class='bx bx-menu' id="btn" ></i>
+    </div>
+    <ul class="nav-list">
+      <!-- <li>
+          <i class='bx bx-search' ></i>
+         <input type="text" placeholder="Search...">
+         <span class="tooltip">Search</span>
+      </li> -->
+      <li>
+        <a href="index.html" class="nav-link">
+          <i class='bx bx-home'></i>
+          <span class="links_name">Home</span>
+        </a>
+        <span class="tooltip">Home</span>
+      </li>
+      <li>
+        <a href="project.html" class="nav-link">
+          <i class='bx bxs-folder-open'></i>
+          <span class="links_name">Project</span>
+        </a>
+        <span class="tooltip">Project</span>
+
+      </li>
+      <li class="active">
+        <a href="about.html" class="nav-link">
+          <i class='bx bx-info-circle'></i>
+          <span class="links_name">About</span>
+        </a>
+        <span class="tooltip">About</span>
+      </li>
+      <li>
+        <a href="contact.html" class="nav-link">
+          <i class='bx bxs-contact'></i>
+          <span class="links_name">Contact</span>
+        </a>
+        <span class="tooltip">Contact</span>
+      </li>
+
+    </ul>
+  </div>
+  <section class="home-section">
+    <section id="project">
+      <div class="container_about  fade-in" >
+          <section class="section">
+            <h2 >Introduction</h2>
+            <p class="p">At S.R. R&D Labs, we are dedicated to pioneering advancements in Research and development. Our mission is to innovate and develop solutions that drive progress and improve lives. Discover our cutting-edge products and services designed to meet the needs of today's world. As we near the launch stage, we remain committed to our founding principles and are excited to introduce our innovative products and services to the world. S.R. R&D Labs is more than a company—it's a testament to the power of dreams, dedication, and the unwavering pursuit of making the world a better place through technology, focused on helping people. We are focused to ensure that our technology can go hand to hand with man-made resources.</p>
+          </section >
+          
+          <section class="section">
+            <h2 >Our Story</h2>
+            <p class="p">A team of passionate engineers and researchers, S.R. R&D Labs has been at the forefront of innovation from 2024. Our commitment to excellence and our drive to push the boundaries of technology have made us a visionary. We are dedicated to addressing the challenges of accessibility, ensuring our advancements promote inclusivity. Through successful collaborations and pioneering solutions, we continue to explore new frontiers, delivering technologies that empower individuals and improve lives. At S.R. R&D Labs, we believe in creating a future where technology enables us to help people.</p>
+          </section>
+          
+          <section class="section">
+            <h2 >Mission and Vision</h2>
+            <p class="p"><strong class="strong">Our mission:</strong> To innovate technology that enhances accessibility and improves lives through dedicated research and development.</p>
+            <p class="p"><strong class="strong">Our vision:</strong> A world where inclusive technology empowers everyone to reach their full potential, and we are dedicated to making that vision a reality through our relentless pursuit of innovation.</p>
+          </section>
+          
+          <section class="section">
+            <h2 >Our Offerings</h2>
+            <p class="p">We provide a range of advanced solutions including solutions for the problems for day-to-day life. Each product is designed with precision and expertise to ensure the highest quality and performance.</p>
+          </section>
+          
+          <section class="section">
+            <h2 >Why Choose Us?</h2>
+            <ul class="ul">
+              <li class="li">Cutting-edge technology</li>
+              <li class="li">Unmatched expertise</li>
+              <li class="li">Customer-centric approach</li>
+            </ul>
+          </section>
+        
+        <footer class="footer">
+          <p>&copy; 2024 S.R. R&D Labs. All rights reserved.</p>
+        </footer>
+        
+      </div>
+    </section>
+
+  </section>
+  <script>
+  let sidebar = document.querySelector(".sidebar");
+  let closeBtn = document.querySelector("#btn");
+  let searchBtn = document.querySelector(".bx-search");
+
+  closeBtn.addEventListener("click", ()=>{
+    sidebar.classList.toggle("open");
+    menuBtnChange();//calling the function(optional)
+  });
+
+  // following are the code to change sidebar button(optional)
+  function menuBtnChange() {
+   if(sidebar.classList.contains("open")){
+     closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");//replacing the iocns class
+   }else {
+     closeBtn.classList.replace("bx-menu-alt-right","bx-menu");//replacing the iocns class
+   }
+  }
+  </script>
+  <script src="assets/js/main.js"></script>
+
+</body>
+</html>

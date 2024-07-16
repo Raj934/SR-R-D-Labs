@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<!-- Created by CodingLab |www.youtube.com/CodingLabYT-->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title> SR R&D Labs </title>
+    <link rel="icon" href="assets/img/logo.png"
+    type="image/x-icon" />
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body class="">
+  <div class="sidebar">
+    <div class="logo-details">
+      <!-- <i class='bx bxl-c-plus-plus icon'></i> -->
+      <a href="index.html" class="logo"><img src="assets/img/SR Logo.png" alt="" class='bx bxl-c-plus-plus icon' style="width: 91px;height: 85px;margin-left: -18px;margin-right: 17px;"></a>
+        <div class="logo_name" style="
+        margin-left: 12px;">SR R&D Labs</div>
+        <i class='bx bx-menu' id="btn" ></i>
+    </div>
+    <ul class="nav-list">
+      <!-- <li>
+          <i class='bx bx-search' ></i>
+         <input type="text" placeholder="Search...">
+         <span class="tooltip">Search</span>
+      </li> -->
+      <li>
+        <a href="index.html" class="nav-link">
+          <i class='bx bx-home'></i>
+          <span class="links_name">Home</span>
+        </a>
+        <span class="tooltip">Home</span>
+      </li>
+      <li class="active">
+        <a href="project.html" class="nav-link">
+          <i class='bx bxs-folder-open'></i>
+          <span class="links_name">Project</span>
+        </a>
+        <span class="tooltip">Project</span>
+
+      </li>
+      <li>
+        <a href="about.html" class="nav-link">
+          <i class='bx bx-info-circle'></i>
+          <span class="links_name">About</span>
+        </a>
+        <span class="tooltip">About</span>
+      </li>
+      <li>
+        <a href="contact.html" class="nav-link">
+          <i class='bx bxs-contact'></i>
+          <span class="links_name">Contact</span>
+        </a>
+        <span class="tooltip">Contact</span>
+      </li>
+
+    </ul>
+  </div>
+  <section class="home-section">
+    <section id="project">
+      <div class="project-container fade-in">
+        <div class="project-list">
+          <h2>Projects</h2>
+          <ul id="project-menu">
+            <li data-project="asm">ASM</li>
+            <li data-project="sk">SKS</li>
+            <li data-project="add">Project 3</li>
+            <!-- Add more project options as needed -->
+          </ul>
+        </div>
+
+        <div class="project-details">
+          <div class="project-details">
+            <div id="project-asm" class="project-card fade-in">
+              <h2>ASM (Automatic Stitching Machine)</h2>
+              <p class="p"><strong>Overview:</strong> Project ASM is an innovative automatic stitching machine designed to
+                revolutionize the textile industry by providing high-efficiency, customizable stitching solutions.
+              </p>
+              <h2>Features and Benefits:</h2>
+              <ul class="ul">
+                <li class="li">High Efficiency: Automated processes that significantly increase production speed.</li>
+                <li class="li">Customizable: Adapts to various fabric types and stitching patterns.</li>
+                <li class="li">Cost Savings: Reduces labor costs and increases operational efficiency.</li>
+                <li class="li">Quality Assurance: Consistent stitching quality with minimal errors.</li>
+              </ul>
+              <h2>Market Potential:</h2>
+              <ul class="ul">
+                <li class="li">Industry Demand: Growing demand for automation in textile manufacturing.</li>
+                <li class="li">Competitive Advantage: Provides a competitive edge with advanced technology.</li>
+                <li class="li">Scalability: Suitable for small to large-scale operations.</li>
+              </ul>
+              <h2>Status:</h2>
+              <p class="p">Patent: Patent filed and pending approval.</p>
+            </div>
+            <div id="project-sk" class="project-card fade-in">
+              <h2>SKS (Synchronous Key System)</h2>
+              <p class="p"><strong>Overview:</strong> Say Goodbye to Lost Keys and Security Worries! Introducing the Synchronous Key System. This innovative system combines the familiarity of a traditional key with the power of advanced technology. It offers enhanced security through multi-factor authentication and a convenient digital key backup on your phone, all while maintaining user-friendliness.</p>
+              
+              <h2>Features and Benefits:</h2>
+              <ul class="ul">
+                  <li class="li">Enhanced Security: Multi-factor authentication through a physical key with RFID verification, optional digital key with user authentication, and a blocked keyhole significantly improves security compared to traditional methods.</li>
+                  <li class="li">Convenience: Combines the familiarity of a physical key with the ease of a digital backup on your phone, eliminating the risk of lockouts due to lost keys or dead batteries.</li>
+                  <li class="li">Offline Functionality (Optional): The digital key can work even without an internet connection, ensuring access even in situations with limited mobile signal.</li>
+                  <li class="li">Potential Applications: Suitable for homes, apartments, offices, short-term rentals, and high-security facilities.</li>
+                  <li class="li">Future-Proof Design: Can integrate with smart home platforms and explore advanced features like biometric authentication for even stronger security.</li>
+              </ul>
+              
+              <h2>Market Potential:</h2>
+              <ul class="ul">
+                  <li class="li">Residential Security Solutions</li>
+                  <li class="li">Commercial and Office Buildings</li>
+                  <li class="li">Short-term Rentals and Hospitality</li>
+              </ul>
+              
+              <h2>Status:</h2>
+              <p class="p">Currently in development phase, targeting release in Q4 2024.</p>
+          </div>
+          
+          
+            <div id="project-add" class="project-card fade-in">
+              <h2>Coming Soon.....</h2>
+            </div>
+            <!-- Add more project cards with unique IDs and details for other projects -->
+          </div>
+        </div>
+      </div>
+
+    </section>
+  </section>
+  
+  <script>
+      // Project 
+      document.addEventListener('DOMContentLoaded', function () {
+      const projectMenuItems = document.querySelectorAll('#project-menu li');
+      const projectCards = document.querySelectorAll('.project-card');
+
+      projectMenuItems.forEach(item => {
+        item.addEventListener('click', function () {
+          const projectId = this.getAttribute('data-project');
+          projectCards.forEach(card => {
+            card.classList.remove('active');
+          });
+          document.getElementById(`project-${projectId}`).classList.add('active');
+        });
+      });
+    });
+
+  let sidebar = document.querySelector(".sidebar");
+  let closeBtn = document.querySelector("#btn");
+  let searchBtn = document.querySelector(".bx-search");
+
+  closeBtn.addEventListener("click", ()=>{
+    sidebar.classList.toggle("open");
+    menuBtnChange();//calling the function(optional)
+  });
+
+  // following are the code to change sidebar button(optional)
+  function menuBtnChange() {
+   if(sidebar.classList.contains("open")){
+     closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");//replacing the iocns class
+   }else {
+     closeBtn.classList.replace("bx-menu-alt-right","bx-menu");//replacing the iocns class
+   }
+  }
+  </script>
+  <script src="assets/js/main.js"></script>
+
+</body>
+</html>

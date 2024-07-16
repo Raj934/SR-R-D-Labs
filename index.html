@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<!-- Created by CodingLab |www.youtube.com/CodingLabYT-->
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <title> SR R&D Labs </title>
+  <link rel="icon" href="assets/img/logo.png" type="image/x-icon" />
+  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- Boxicons CDN Link -->
+  <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body class="">
+  <div class="sidebar">
+    <div class="logo-details">
+      <!-- <i class='bx bxl-c-plus-plus icon'></i> -->
+      <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class='bx bxl-c-plus-plus icon'
+          style="width: 91px;height: 85px;margin-left: -18px;margin-right: 17px;"></a>
+      <div class="logo_name" style="
+        margin-left: 12px;">SR R&D Labs</div>
+      <i class='bx bx-menu' id="btn"></i>
+    </div>
+    <ul class="nav-list">
+      <!-- <li>
+          <i class='bx bx-search' ></i>
+         <input type="text" placeholder="Search...">
+         <span class="tooltip">Search</span>
+      </li> -->
+      <li class="active">
+        <a href="index.html" class="nav-link">
+          <i class='bx bx-home'></i>
+          <span class="links_name">Home</span>
+        </a>
+        <span class="tooltip">Home</span>
+      </li>
+      <li>
+        <a href="project.html" class="nav-link">
+          <i class='bx bxs-folder-open'></i>
+          <span class="links_name">Project</span>
+        </a>
+        <span class="tooltip">Project</span>
+
+      </li>
+      <li>
+        <a href="about.html" class="nav-link">
+          <i class='bx bx-info-circle'></i>
+          <span class="links_name">About</span>
+        </a>
+        <span class="tooltip">About</span>
+      </li>
+      <li>
+        <a href="contact.html" class="nav-link">
+          <i class='bx bxs-contact'></i>
+          <span class="links_name">Contact</span>
+        </a>
+        <span class="tooltip">Contact</span>
+      </li>
+
+    </ul>
+  </div>
+  <section class="home-section " id="home">
+    <!--Hey! This is the original version
+of Simple CSS Waves-->
+    <div class="sample-header ">
+      <div class="sample-header-section">
+        <div class="header">
+
+          <!--Content before waves-->
+          <div class="inner-header flex">
+            <!--Just the logo.. Don't mind this-->
+            <a href="index.html" class="logo" style="margin-right: 600px;"><img src="assets/img/SR Logo.png" alt=""
+                class='' style="
+                    height: 600px;"></a>
+            <!-- <h1 style="margin-top: 300px;">Simple CSS Waves</h1> -->
+          </div>
+
+          <!--Waves Container-->
+          <div>
+            <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+              viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+              <defs>
+                <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+              </defs>
+              <g class="parallax">
+                <use xlink:href="#gentle-wave" x="48" y="0" fill="rgb(155 149 35 / 5%)" />
+                <use xlink:href="#gentle-wave" x="48" y="3" fill="rgb(155 149 35 / 5%)" />
+                <use xlink:href="#gentle-wave" x="48" y="5" fill="rgb(155 149 35 / 5%)" />
+                <use xlink:href="#gentle-wave" x="48" y="7" fill="rgb(155 149 35 / 5%)" />
+              </g>
+            </svg>
+          </div>
+          <!--Waves end-->
+
+        </div>
+        <!--Header ends-->
+
+        <!--Content starts-->
+        <div class="content">
+          <p style=" 
+            text-transform: uppercase;
+            font-family: verdana;
+            font-size: 13px;
+            font-weight: 700;
+            color: #e1a446; 
+            padding-top: 29px;">Welcome to the center of innovation! Discover our revolutionary technologies and
+            solutions that will shape the future. </p> <br><br>
+          <div class="down" style="margin-top: -20px;">
+            <a href="project.html" class="down-link">
+              <span class="button">Know More</span>
+            </a>
+          </div>
+
+
+        </div>
+
+        <!--Content ends-->
+      </div>
+    </div>
+    <!--Main content-->
+    <div class="sample-section-wrap">
+      
+    </div>
+    <!--Main content end-->
+
+
+
+  </section>
+
+
+
+  <script>
+    // Project 
+    document.addEventListener('DOMContentLoaded', function () {
+      const projectMenuItems = document.querySelectorAll('#project-menu li');
+      const projectCards = document.querySelectorAll('.project-card');
+
+      projectMenuItems.forEach(item => {
+        item.addEventListener('click', function () {
+          const projectId = this.getAttribute('data-project');
+          projectCards.forEach(card => {
+            card.classList.remove('active');
+          });
+          document.getElementById(`project-${projectId}`).classList.add('active');
+        });
+      });
+    });
+
+    let sidebar = document.querySelector(".sidebar");
+    let closeBtn = document.querySelector("#btn");
+    let searchBtn = document.querySelector(".bx-search");
+
+    closeBtn.addEventListener("click", () => {
+      sidebar.classList.toggle("open");
+      menuBtnChange();//calling the function(optional)
+    });
+
+
+    // following are the code to change sidebar button(optional)
+    function menuBtnChange() {
+      if (sidebar.classList.contains("open")) {
+        closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");//replacing the iocns class
+      } else {
+        closeBtn.classList.replace("bx-menu-alt-right", "bx-menu");//replacing the iocns class
+      }
+    }
+
+    // Smooth scrolling when clicking on sidebar links
+  
+
+
+
+
+  </script>
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>
