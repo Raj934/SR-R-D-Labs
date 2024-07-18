@@ -280,7 +280,7 @@
 
 .home-section {
   position: relative;
-  background: rgb(155 149 35 / 54%);
+  background: #003225;
   min-height: 100vh;
   top: 0;
   left: 78px;
@@ -700,14 +700,14 @@ strong {
   text-align: justify;
   font-style: italic;  
     font-weight: bold; 
-  font-family: fangsong;
+  font-family: Arial, Helvetica, sans-serif;;
 
 }
 
 .li {
   font-style: italic;
   font-weight: bold; 
-  font-family: fangsong;
+  font-family: Arial, Helvetica, sans-serif;;
 }
 
 .p_c {
@@ -717,7 +717,7 @@ strong {
   color: #333333;;
   font-style: italic;
   font-weight: bold; 
-  font-family: fangsong;
+  font-family: Arial, Helvetica, sans-serif;;
 }
 
 .strong {
@@ -744,7 +744,7 @@ strong {
 /* contact*/
 
 .container_contact {
-  max-width: 500px;
+  max-width: 535px;
   margin: 0 auto;
   padding: 20px;
   background-color: #fff;
@@ -752,6 +752,14 @@ strong {
   box-shadow: 5px 29px 22px rgb(16 16 16 / 59%);
 }
 
+.container_con {
+  max-width: 0;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 5px 29px 22px rgb(16 16 16 / 59%);
+}
 #contact {
   padding-top: 50px;
   text-align: center;
@@ -867,7 +875,7 @@ h3 {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
-  background-color: #fff0;
+  background-color: #ffff;
   border-radius: 8px;
 }
 
